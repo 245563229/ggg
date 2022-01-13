@@ -25,11 +25,13 @@ $(function () {
   $('#form_reg').on('submit', function (e) {
     e.preventDefault()
     $.post('http://www.liulongbin.top:3007/api/reguser', data, function (res) {
-      if (res.status !== 0) {
-        return layer.msg(res.message);
+      console.log(data);
+      console.log(res);
+      if (res.status != 0) {
+        return console.log(res.message);
       }
-      layer.msg('注册成功');
-      $('#link_login').click()
+      console.log('注册成功');
+      // $('#link_login').click()
     })
   })
 
