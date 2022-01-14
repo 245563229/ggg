@@ -20,9 +20,10 @@
       </div>
       <!-- 头部区域（可配合layui已有的水平导航） -->
       <ul class="layui-nav layui-layout-right">
-        <li class="layui-nav-item">
+        <li class="layui-nav-item uesrinfo">
           <a href="javascript:;">
             <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+            <span class="text-avatar">A</span>
             个人中心
           </a>
           <dl class="layui-nav-child">
@@ -31,31 +32,38 @@
             <dd><a href="">重置密码</a></dd>
           </dl>
         </li>
-        <li class="layui-nav-item"><a href=""><span class="iconfont">&#xe865;</span>退出</a></li>
+        <li class="layui-nav-item"><a href="javascript:;" id="btnLogout"><span class="iconfont">&#xe865;</span>退出</a>
+        </li>
       </ul>
     </div>
 
     <div class="layui-side layui-bg-black">
       <div class="layui-side-scroll">
+        <div class="uesrinfo">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          <span class="text-avatar">A</span>
+          <span id="welcome">欢迎光临</span>
+        </div>
+
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <ul class="layui-nav layui-nav-tree" lay-shrink="all">
-          <li class="layui-nav-item ">
-            <a class="" href="javascript:;"><span class="iconfont">&#xe6a9;</span>首页</a>
+          <li class="layui-nav-item layui-this">
+            <a href="/xiangmu/home/dashboard.html" target="fm"><span class="iconfont">&#xe6a9;</span>首页</a>
           </li>
           <li class="layui-nav-item">
             <a href="javascript:;"><span class="iconfont">&#xe615;</span>文章管理</a>
             <dl class="layui-nav-child">
-              <dd><a href="javascript:;">文章类别</a></dd>
-              <dd><a href="javascript:;">文章列表</a></dd>
-              <dd><a href="javascript:;">发表文章</a></dd>
+              <dd><a href="javascript:;"><span class="iconfont">&#xe615;</span>文章类别</a></dd>
+              <dd><a href="javascript:;"><span class="iconfont">&#xe615;</span>文章列表</a></dd>
+              <dd><a href="javascript:;"><span class="iconfont">&#xe615;</span>发表文章</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item">
             <a href="javascript:;"><span class="iconfont">&#xe614;</span>个人中心</a>
             <dl class="layui-nav-child">
-              <dd><a href="javascript:;">基本资料</a></dd>
-              <dd><a href="javascript:;">更换头像</a></dd>
-              <dd><a href="javascript:;">重置密码</a></dd>
+              <dd><a href="javascript:;"><span class="iconfont">&#xe616;</span>基本资料</a></dd>
+              <dd><a href="javascript:;"><span class="iconfont">&#xe616;</span>更换头像</a></dd>
+              <dd><a href="javascript:;"><span class="iconfont">&#xe616;</span>重置密码</a></dd>
             </dl>
           </li>
         </ul>
@@ -64,7 +72,7 @@
 
     <div class="layui-body">
       <!-- 内容主体区域 -->
-      <div style="padding: 15px;">内容主体区域</div>
+      <iframe src="/xiangmu/home/dashboard.html" frameborder="0" name="fm"></iframe>
     </div>
 
     <div class="layui-footer">
@@ -72,13 +80,16 @@
       www.xiaoge.com-2022/1/14
     </div>
   </div>
-  <script>
+  <!-- <script>
     //JavaScript代码区域
     layui.use('element', function () {
       var element = layui.element;
     });
-  </script>
+  </script> -->
   <script src="/xiangmu/assets/lib/layui/layui.all.js"></script>
+  <script src="/xiangmu/assets/lib/jquery.js"></script>
+  <script src="/xiangmu/assets/js/ajax.js"></script>
+  <script src="/xiangmu/assets/js/index.js"></script>
 </body>
 
 </html>
