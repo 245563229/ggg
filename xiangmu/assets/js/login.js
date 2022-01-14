@@ -20,13 +20,13 @@ $(function () {
       }
     }
   })
-  var data = { username: $('#form_reg [name=username]').val(), password: $('#form_reg [name=password]').val() }
+
   //监听注册表单提交事件
   $('#form_reg').on('submit', function (e) {
     e.preventDefault()
-    $.post('http://www.liulongbin.top:3007/api/reguser', data, function (res) {
-      console.log(data);
-      console.log(res);
+    $.post('http://www.liulongbin.top:3007/api/reguser', { username: $('#form_reg [name=username]').val(), password: $('#form_reg [name=password]').val() }, function (res) {
+      // console.log($('#form_reg [name=password]').val());
+      // console.log(res);
       if (res.status != 0) {
         return console.log(res.message);
       }
